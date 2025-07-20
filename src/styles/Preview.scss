@@ -1,0 +1,26 @@
+.Preview {
+  width: 50%;
+  padding: 0 15px;
+  @import "BusinessCard";
+  text-align: center;
+  h2 {
+    text-align: left;
+  }
+  &-Wrapper {
+    display: inline-block;
+    margin-bottom: 15px;
+  }
+  &-Actions {
+    button {
+      margin: 5px;
+      border: 2px solid #ccf;
+      background-color: #eef;
+      padding: 5px;
+      border-radius: 5px;
+      cursor: pointer;
+      &:hover {
+        background-color: #ccf;
+      }
+    }
+  }
+}

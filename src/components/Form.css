@@ -1,0 +1,147 @@
+.Form {
+  max-width: 420px;
+  margin: 40px auto;
+  padding: 32px 28px;
+  background: linear-gradient(135deg, #e0c3fc 0%, #8ec5fc 100%);
+  border-radius: 18px;
+  box-shadow: 0 6px 24px rgba(0,0,0,0.10), 0 1.5px 6px rgba(0,0,0,0.08);
+  font-family: 'Montserrat', sans-serif;
+  color: #3d246c;
+  animation: fadeInForm 0.8s;
+}
+
+@keyframes fadeInForm {
+  from { opacity: 0; transform: translateY(30px);}
+  to { opacity: 1; transform: translateY(0);}
+}
+
+.Form h2 {
+  text-align: center;
+  margin-bottom: 28px;
+  font-size: 2rem;
+  color: #5f2c82;
+  letter-spacing: 1px;
+  text-shadow: 0 2px 8px #e0c3fc44;
+}
+
+.Form form > div {
+  margin-bottom: 22px;
+}
+
+.Form label {
+  display: block;
+  margin-bottom: 7px;
+  font-weight: 500;
+  font-size: 1.08rem;
+  color: #3d246c;
+  letter-spacing: 0.5px;
+}
+
+.Form input,
+.Form textarea {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1.5px solid #b39ddb;
+  border-radius: 7px;
+  font-size: 1rem;
+  background: #f8f6ff;
+  color: #3d246c;
+  transition: border 0.2s, box-shadow 0.2s;
+  outline: none;
+  resize: none;
+  box-shadow: 0 1px 4px #e0c3fc22;
+}
+
+.Form input:focus,
+.Form textarea:focus {
+  border-color: #5f2c82;
+  background: #fff;
+  box-shadow: 0 2px 8px #b39ddb44;
+}
+
+.Form textarea {
+  min-height: 80px;
+  max-height: 180px;
+}
+
+.Form .submit-btn {
+  width: 100%;
+  padding: 13px 0;
+  background: linear-gradient(90deg, #5f2c82 0%, #49a09d 100%);
+  color: #fff;
+  font-size: 1.13rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 7px;
+  cursor: pointer;
+  margin-top: 12px;
+  box-shadow: 0 2px 8px #8ec5fc33;
+  transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
+  letter-spacing: 1px;
+}
+
+.Form .submit-btn:hover,
+.Form .submit-btn:focus {
+  background: linear-gradient(90deg, #49a09d 0%, #5f2c82 100%);
+  transform: translateY(-2px) scale(1.03);
+  box-shadow: 0 4px 16px #5f2c8233;
+}
+
+@media (max-width: 600px) {
+  .Form {
+    padding: 18px 6vw;
+  }
+}
+
+
+/* Add to App.css or a new AuthBg.css and import it in App.js */
+.auth-bg {
+  min-height: 100vh;
+  width: 100vw;
+  position: relative;
+  background: linear-gradient(120deg, #f8fafc 0%, #ffe3ec 100%);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.auth-bg-svg {
+  position: fixed;
+  top: 0; left: 0; width: 100vw; height: 100vh;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.8;
+  animation: floatBg 12s ease-in-out infinite alternate;
+}
+
+@keyframes floatBg {
+  0% { transform: scale(1) translateY(0); }
+  100% { transform: scale(1.05) translateY(-20px); }
+}
+
+.App {
+  position: relative;
+  z-index: 1;
+}
+/* Add to your Form.css for select styling */
+.Form select {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1.5px solid #b39ddb;
+  border-radius: 7px;
+  font-size: 1rem;
+  background: #f8f6ff;
+  color: #3d246c;
+  transition: border 0.2s, box-shadow 0.2s;
+  outline: none;
+  margin-bottom: 0;
+  box-shadow: 0 1px 4px #e0c3fc22;
+}
+
+.Form select:focus {
+  border-color: #5f2c82;
+  background: #fff;
+  box-shadow: 0 2px 8px #b39ddb44;
+}
